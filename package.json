@@ -4,7 +4,10 @@
   "description": "This is Cypress+Javascript Repository",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules\\.bin\\cypress run",
+    "headtest":"npm run test -- --headed --spec cypress\\e2e\\framework\\LoginTest.cy.js ",
+    "headtestBrowser":"npm run test -- --headed --browser chrome --spec cypress\\e2e\\framework\\LoginTest.cy.js ",
+    "recordDashboardTest":"npm run test -- --spec cypress\\e2e\\framework\\*.js --headed --browser chrome  --record --key 2c678b94-cf69-4fa6-a34c-a444ba43026a"
   },
   "repository": {
     "type": "git",
@@ -17,6 +20,7 @@
   },
   "homepage": "https://github.com/gcekmadhu/CypressJavascript#readme",
   "devDependencies": {
-    "cypress": "^13.3.0"
+    "cypress": "^13.3.0",
+    "cypress-iframe": "^1.0.1"
   }
 }
